@@ -1,0 +1,292 @@
+/**
+ * ReciclaInfo - Main Styles
+ * Global styles and theme variables
+ */
+
+/* CSS Variables - Design System */
+:root {
+  /* Cores Primárias - Verde Sustentável */
+  --primary: #2D6A4F;
+  --primary-light: #40916C;
+  --primary-dark: #1B4332;
+  
+  /* Cores Secundárias */
+  --secondary: #52B788;
+  --secondary-light: #74C69D;
+  
+  /* Cores de Suporte */
+  --success: #52B788;
+  --warning: #F4A261;
+  --danger: #E63946;
+  --info: #457B9D;
+  
+  /* Neutros */
+  --white: #FFFFFF;
+  --gray-100: #F8F9FA;
+  --gray-200: #E9ECEF;
+  --gray-300: #DEE2E6;
+  --gray-700: #495057;
+  --gray-900: #212529;
+  
+  /* Texto */
+  --text-primary: #212529;
+  --text-secondary: #6C757D;
+  --text-light: #FFFFFF;
+  
+  /* Fontes */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  
+  /* Tamanhos de Texto */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  
+  /* Pesos */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Espaçamento */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.5rem;
+  --spacing-6: 2rem;
+  --spacing-8: 3rem;
+  --spacing-10: 4rem;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  background-color: var(--gray-100);
+  line-height: 1.6;
+  font-size: var(--text-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-4);
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: var(--text-4xl);
+}
+
+h2 {
+  font-size: var(--text-3xl);
+}
+
+h3 {
+  font-size: var(--text-2xl);
+}
+
+h4 {
+  font-size: var(--text-xl);
+}
+
+h5 {
+  font-size: var(--text-lg);
+}
+
+h6 {
+  font-size: var(--text-base);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+p {
+  margin-bottom: var(--spacing-4);
+  line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+  padding: var(--spacing-4) 0;
+}
+
+.navbar-brand {
+  font-size: var(--text-xl);
+  color: var(--primary) !important;
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: var(--font-medium);
+  padding: var(--spacing-2) var(--spacing-4) !important;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar .nav-link:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  color: #C4EBDB !important;
+}
+
+.navbar .nav-link:hover {
+  color: #C4EBDB !important;
+  text-decoration: none;
+}
+
+.navbar .nav-link.active {
+  color: #C4EBDB !important;
+  font-weight: var(--font-semibold);
+  border-bottom: 2px solid #C4EBDB;
+}
+
+/* Main Container */
+#app-container {
+  min-height: calc(100vh - 80px);
+}
+
+/* Global Loader */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-overlay.show {
+  display: flex;
+}
+
+.loader-content {
+  text-align: center;
+  color: var(--white);
+}
+
+.loader-message {
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+}
+
+/* Utility Classes */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+/* Toast Notifications */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: var(--spacing-4) var(--spacing-5);
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: var(--font-medium);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 9998;
+  max-width: 400px;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-success {
+  background-color: #2B4138;
+  color: #ffffff;
+}
+
+.toast-error {
+  background-color: #2B4138;
+  color: #ffffff;
+}
+
+.toast-warning {
+  background-color: #2B4138;
+  color: #ffffff;
+}
+
+.toast-info {
+  background-color: #2B4138;
+  color: #ffffff;
+}
+
+/* Profile Tabs Styling */
+.nav-tabs {
+  border-bottom: 2px solid #2B4138;
+  gap: 8px;
+}
+
+.nav-tabs .nav-link {
+  background-color: #2B4138 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px 8px 0 0 !important;
+  margin-right: 8px;
+  padding: 12px 24px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: #3d5a4d !important;
+  color: #C4EBDB !important;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #1a2e24 !important;
+  color: #C4EBDB !important;
+  border-bottom: 3px solid #C4EBDB !important;
+  font-weight: 600;
+}
+
+.nav-tabs .nav-link:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

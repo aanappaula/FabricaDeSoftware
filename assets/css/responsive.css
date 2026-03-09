@@ -1,0 +1,641 @@
+/**
+ * ReciclaInfo - Responsive Styles
+ * Media queries for different screen sizes
+ * Mobile-first approach: Base styles for mobile, then progressively enhance for larger screens
+ */
+
+/* ============================================
+   BASE STYLES (Mobile First - 320px+)
+   ============================================ */
+
+/* Default mobile styles are in main.css and components.css */
+
+/* Mobile-specific overrides (320px-767px) */
+@media (max-width: 767px) {
+  /* Navigation */
+  .navbar {
+    padding: var(--spacing-3) 0;
+  }
+  
+  .navbar-brand {
+    font-size: var(--text-lg);
+  }
+  
+  .navbar-toggler {
+    border: none;
+    padding: var(--spacing-2);
+  }
+  
+  .navbar-collapse {
+    margin-top: var(--spacing-3);
+  }
+  
+  .nav-link {
+    padding: var(--spacing-3) var(--spacing-2) !important;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  
+  .nav-item:last-child .nav-link {
+    border-bottom: none;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--spacing-3);
+  }
+  
+  h2 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--spacing-3);
+  }
+  
+  h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--spacing-2);
+  }
+  
+  /* Containers */
+  .container {
+    padding-left: var(--spacing-3);
+    padding-right: var(--spacing-3);
+  }
+  
+  /* Cards */
+  .card {
+    margin-bottom: var(--spacing-4);
+    padding: var(--spacing-4);
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  /* Buttons */
+  .btn {
+    width: 100%;
+    margin-bottom: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+  
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .btn-group .btn {
+    width: 100%;
+  }
+  
+  /* Forms */
+  .form-group {
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .form-control {
+    font-size: var(--text-base);
+    padding: var(--spacing-3);
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: var(--spacing-6) var(--spacing-3);
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: var(--text-2xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--text-base);
+  }
+  
+  .hero-image {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Map Container */
+  .map-container {
+    height: 300px;
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .map-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .map-toggle-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--spacing-3);
+  }
+  
+  /* Filters */
+  .filter-section {
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  /* Lists */
+  .list-item {
+    padding: var(--spacing-3);
+    margin-bottom: var(--spacing-3);
+  }
+  
+  /* Modals */
+  .modal-dialog {
+    margin: var(--spacing-3);
+  }
+  
+  .modal-body {
+    padding: var(--spacing-4);
+  }
+  
+  /* Toast Notifications */
+  .toast {
+    right: 10px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+    bottom: 10px;
+  }
+  
+  /* Image Preview */
+  .image-preview {
+    max-height: 200px;
+  }
+  
+  /* Tabs */
+  .nav-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .nav-tabs .nav-link {
+    white-space: nowrap;
+    font-size: var(--text-sm);
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+  
+  /* Profile Section */
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-4);
+  }
+  
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: var(--spacing-3);
+  }
+  
+  /* Timeline */
+  .timeline-item {
+    padding-left: var(--spacing-4);
+  }
+  
+  /* Carousel */
+  .carousel-item {
+    padding: var(--spacing-4);
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+  }
+  
+  /* Educational Cards */
+  .tip-card {
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .tip-image {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: var(--spacing-5) var(--spacing-3);
+    text-align: center;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+}
+
+/* ============================================
+   SMALL DEVICES (Landscape phones, 576px+)
+   ============================================ */
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  /* Hero adjustments */
+  .hero-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .hero-image {
+    max-height: 250px;
+  }
+  
+  /* Cards can start showing in 2 columns on landscape */
+  .card-grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-4);
+  }
+  
+  /* Buttons can be inline for some actions */
+  .btn-group-inline {
+    flex-direction: row;
+    gap: var(--spacing-2);
+  }
+  
+  .btn-group-inline .btn {
+    width: auto;
+    flex: 1;
+  }
+}
+
+/* ============================================
+   TABLET DEVICES (768px - 1023px)
+   ============================================ */
+
+@media (min-width: 768px) {
+  /* Container */
+  .container {
+    max-width: 720px;
+  }
+  
+  /* Navigation */
+  .navbar-nav {
+    flex-direction: row;
+  }
+  
+  .nav-item {
+    margin-left: var(--spacing-2);
+  }
+  
+  .nav-link {
+    padding: var(--spacing-2) var(--spacing-3) !important;
+    border-bottom: none !important;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: var(--text-3xl);
+  }
+  
+  h2 {
+    font-size: var(--text-2xl);
+  }
+  
+  /* Cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-4);
+  }
+  
+  /* Buttons */
+  .btn {
+    width: auto;
+    min-width: 120px;
+  }
+  
+  .btn-group {
+    flex-direction: row;
+    gap: var(--spacing-3);
+  }
+  
+  /* Forms */
+  .form-row {
+    flex-direction: row;
+    gap: var(--spacing-3);
+  }
+  
+  .form-row > * {
+    flex: 1;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: var(--spacing-8) var(--spacing-5);
+  }
+  
+  .hero-title {
+    font-size: var(--text-4xl);
+  }
+  
+  .hero-image {
+    max-height: 350px;
+  }
+  
+  /* Map Container */
+  .map-container {
+    height: 400px;
+  }
+  
+  .map-sidebar {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    background: var(--white);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .map-sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+  
+  .map-toggle-btn {
+    display: inline-block;
+    width: auto;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1001;
+  }
+  
+  /* Profile Section */
+  .profile-header {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: var(--spacing-4);
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0;
+  }
+  
+  /* Tabs */
+  .nav-tabs .nav-link {
+    font-size: var(--text-base);
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+  
+  /* Timeline */
+  .timeline-item {
+    padding-left: var(--spacing-6);
+  }
+  
+  /* Toast */
+  .toast {
+    right: 20px;
+    left: auto;
+    max-width: 400px;
+  }
+  
+  /* Modal */
+  .modal-dialog {
+    max-width: 600px;
+    margin: var(--spacing-8) auto;
+  }
+  
+  /* Educational Cards */
+  .tip-image {
+    height: 200px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: left;
+  }
+  
+  .footer-links {
+    flex-direction: row;
+    gap: var(--spacing-4);
+  }
+}
+
+/* Tablet-specific range (768px to 1023px only) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Keep 2-column layout for cards */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Adjust map sidebar for tablet */
+  .map-sidebar {
+    width: 280px;
+  }
+  
+  /* Compact spacing for tablets */
+  .hero-section {
+    padding: var(--spacing-6) var(--spacing-4);
+  }
+}
+
+/* ============================================
+   DESKTOP DEVICES (1024px+)
+   ============================================ */
+
+@media (min-width: 1024px) {
+  /* Container */
+  .container {
+    max-width: 960px;
+  }
+  
+  /* Navigation */
+  .navbar {
+    padding: var(--spacing-4) 0;
+  }
+  
+  .nav-item {
+    margin-left: var(--spacing-3);
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: var(--text-4xl);
+  }
+  
+  h2 {
+    font-size: var(--text-3xl);
+  }
+  
+  /* Cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-5);
+  }
+  
+  .card {
+    padding: var(--spacing-5);
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: var(--spacing-10) var(--spacing-6);
+  }
+  
+  .hero-image {
+    max-height: 450px;
+  }
+  
+  /* Map Container */
+  .map-container {
+    height: 500px;
+    position: relative;
+  }
+  
+  .map-sidebar {
+    width: 350px;
+  }
+  
+  /* Two-column layouts */
+  .two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  /* Forms */
+  .form-horizontal {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--spacing-4);
+    align-items: center;
+  }
+  
+  /* Profile Section */
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+  }
+  
+  /* Timeline */
+  .timeline-item {
+    padding-left: var(--spacing-8);
+  }
+  
+  /* Educational Cards */
+  .tip-image {
+    height: 250px;
+  }
+  
+  /* Hover effects (desktop only) */
+  .card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Tooltips and popovers work better on desktop */
+  .tooltip {
+    font-size: var(--text-sm);
+  }
+}
+
+/* ============================================
+   EXTRA LARGE DEVICES (1280px+)
+   ============================================ */
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  /* More spacious layouts */
+  .card-grid {
+    gap: var(--spacing-6);
+  }
+  
+  .hero-section {
+    padding: var(--spacing-10) var(--spacing-8);
+  }
+  
+  /* Larger map */
+  .map-container {
+    height: 600px;
+  }
+  
+  /* 4-column grid for smaller cards */
+  .card-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  /* Hide navigation and interactive elements */
+  .navbar,
+  .btn,
+  .toast,
+  .modal,
+  .map-toggle-btn {
+    display: none !important;
+  }
+  
+  /* Optimize for print */
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+  
+  /* Show URLs for links */
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY - REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ======

@@ -1,0 +1,298 @@
+/**
+ * ReciclaInfo - Component Styles
+ * Styles for reusable components
+ */
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+  padding: var(--spacing-3) var(--spacing-5);
+  border-radius: 8px;
+  font-weight: var(--font-semibold);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-light);
+  border-color: var(--secondary-light);
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-5);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.card-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--primary);
+  margin-bottom: var(--spacing-3);
+}
+
+.card-text {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+}
+
+/* Form Controls */
+.form-control {
+  border: 2px solid var(--gray-300);
+  border-radius: 8px;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--text-base);
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+}
+
+.form-label {
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.form-text {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.invalid-feedback {
+  display: block;
+  color: var(--danger);
+  font-size: var(--text-sm);
+  margin-top: var(--spacing-1);
+}
+
+.is-invalid {
+  border-color: var(--danger);
+}
+
+/* Badges */
+.badge {
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: 6px;
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+}
+
+.badge-success {
+  background-color: var(--success);
+  color: var(--white);
+}
+
+.badge-warning {
+  background-color: var(--warning);
+  color: var(--white);
+}
+
+.badge-danger {
+  background-color: var(--danger);
+  color: var(--white);
+}
+
+.badge-info {
+  background-color: var(--info);
+  color: var(--white);
+}
+
+/* Image Preview */
+.image-preview-container {
+  margin-top: var(--spacing-3);
+  display: none;
+}
+
+.image-preview-container.show {
+  display: block;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 12px;
+  border: none;
+}
+
+.modal-header {
+  background-color: var(--primary);
+  color: var(--white);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.modal-title {
+  font-weight: var(--font-bold);
+}
+
+.modal-body {
+  padding: var(--spacing-5);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--gray-200);
+  padding: var(--spacing-4) var(--spacing-5);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  max-width: 350px;
+}
+
+.toast {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: var(--spacing-3);
+  overflow: hidden;
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toast.hiding {
+  animation: slideOutRight 0.3s ease;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.toast-header {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--gray-200);
+  font-weight: var(--font-semibold);
+}
+
+.toast-header .toast-icon {
+  margin-right: var(--spacing-2);
+  font-size: var(--text-lg);
+}
+
+.toast-header .toast-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: var(--text-xl);
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0;
+  line-height: 1;
+}
+
+.toast-header .toast-close:hover {
+  color: var(--text-primary);
+}
+
+.toast-body {
+  padding: var(--spacing-3) var(--spacing-4);
+  color: var(--text-primary);
+}
+
+/* Toast variants */
+.toast-success .toast-header {
+  background-color: var(--success);
+  color: var(--white);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.toast-success .toast-close {
+  color: var(--white);
+}
+
+.toast-error {
+  background-color: #2B4138 !important;
+}
+
+.toast-error .toast-header {
+  background-color: #2B4138;
+  color: var(--white);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.toast-error .toast-body {
+  color: var(--white);
+}
+
+.toast-error .toast-close {
+  color: var(--white);
+}
+
+
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-8) var(--spacing-4);
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  color: var(--gray-300);
+  margin-bottom: var(--spacing-4);
+}
+
+.empty-state-title {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.empty-state-text {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
