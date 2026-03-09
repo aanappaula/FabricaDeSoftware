@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ReciclaInfo - Plataforma de gestão de descarte de resíduos sólidos urbanos">
+  <title>ReciclaInfo - Descarte Consciente, Cidade Limpa</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #2B4138;">
+    <div class="container">
+      <a class="navbar-brand" href="#/">
+        <span class="ms-2 fw-bold" style="color: #ffffff;">♻️ ReciclaInfo</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" >
+            <a class="nav-link" href="#/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#/mapa">Mapa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#/solicitar">Solicitar Coleta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#/denunciar">Denunciar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#/educativo">Dicas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#/perfil">Perfil</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main id="app-container" class="container-fluid p-0">
+    <!-- Dynamic content will be loaded here -->
+  </main>
+
+  <!-- Global Loader -->
+  <div id="global-loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Carregando...</span>
+      </div>
+      <p class="loader-message mt-3">Carregando...</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Configuration -->
+  <script src="assets/js/config.js"></script>
+
+  <!-- Models -->
+  <script src="assets/js/models/Usuario.js"></script>
+  <script src="assets/js/models/Ponto.js"></script>
+  <script src="assets/js/models/Solicitacao.js"></script>
+  <script src="assets/js/models/Denuncia.js"></script>
+
+  <!-- Services -->
+  <script src="assets/js/services/StorageService.js"></script>
+  <script src="assets/js/services/DataService.js"></script>
+  <script src="assets/js/services/ProtocolService.js"></script>
+  <script src="assets/js/services/ValidationService.js"></script>
+
+  <!-- Components -->
+  <script src="assets/js/components/MapComponent.js"></script>
+  <script src="assets/js/components/ImagePreview.js"></script>
+  <script src="assets/js/components/FormValidator.js"></script>
+  <script src="assets/js/components/Modal.js"></script>
+
+  <!-- Controllers -->
+  <script src="assets/js/controllers/HomeController.js"></script>
+  <script src="assets/js/controllers/MapaController.js"></script>
+  <script src="assets/js/controllers/SolicitarController.js"></script>
+  <script src="assets/js/controllers/DenunciarController.js"></script>
+  <script src="assets/js/controllers/PerfilController.js"></script>
+  <script src="assets/js/controllers/EducativoController.js"></script>
+
+  <!-- Data -->
+  <script src="assets/js/data/seed.js"></script>
+
+  <!-- Router and App -->
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
